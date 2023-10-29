@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#pageone {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: antiquewhite;
+}
+
+nav {
+    width: 100%;
+
+    padding: 10px 10px;
+    border-bottom: 1px solid gray;
+    background-color: rgba(191, 255, 255, 0.865);
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 4vh;
+    justify-content: space-around;
+}
+
+nav ul li img {
+    /* width: 4vw; */
+    height: 7vh;
+    border-radius: 15px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+.gamecontainer {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    position: relative;
+}
+
+.box {
+    border: 2px solid chartreuse;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box:hover {
+    background-color: rgb(255, 245, 231);
+    cursor: pointer;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.gameinfo {
+    padding-left: 5vw;
+}
+
+.info1 {
+    padding: 0vw 3vw;
+    margin-top: 2vh;
+
+}
+
+.imgbox {
+    scale: .0;
+    transition: 1s;
+    /* visibility: hidden;  */
+}
+
+.imgbox1 {
+    scale: .9;
+    transition: 1s;
+    /* visibility: visible; */
+}
+
+#line {
+    background-color: rgb(235, 66, 66);
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f56262;
+    transition: width 1s ease-in-out;
+    border-radius: 2vh;
+    box-shadow: 1px 1px 2px #dd5ddd inset;
+}
+
+#reset {
+    padding: .5vh .5vh;
+    background-color: bisque;
+    border-color: antiquewhite;
+    border-radius: .5vh;
+    cursor: pointer;
+}
+
+#pagetwo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left {
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    font-size: 3vh;
+}
+
+#left h1 {
+    margin: 1vh auto;
+}
+
+#left h2 {
+    color: blue;
+    font-size: 6vh;
+}
+
+#left p {
+    margin: 1vh auto;
+}
+
+#left button {
+    margin-top: 20vh;
+    font-size: 3vh;
+    width: 10vw;
+    height: 7vh;
+    border-radius: 10vh;
+    color: white;
+    background-color: chartreuse;
+    border-color: aliceblue;
+}
+
+#right {
+    width: 40vw;
+    height: 100%;
+    padding: 0vw 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+#right div {
+    width: 140%;
+    height: 100%;
+    margin-top: 10vh;
+
+}
+
+#right div img {
+    width: 90%;
+    height: fit-content;
+    border-radius: 5vh;
+
+}
+
+@media only screen and (max-width:850px) {
+    #pagetwo {
+        /* The image used */
+        background-image: url("logo.jpg");
+        /* Add the blur effect */
+        /* filter: blur(8px);
+        -webkit-filter: blur(8px); */
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+    #right {
+        display: none;
+    }
+
+    #left p{
+        font-size: 3vh;
+        color: crimson;
+    
+    }
+    #left h1{
+        color: chartreuse;
+        font-size: 3vh;
+    }
+
+    #left h2 {
+        font-size: 5vh;
+    }
+
+    #left button {
+        margin-top: 10vh;
+        font-size: 1.5vh;
+        width: 20vw;
+        height: 4vh;
+    }
+    .gamecontainer {
+        background-color: antiquewhite;
+        display: flex;
+        flex-flow: column-reverse;
+        padding-top: 1vh;
+    
+    }
+    .container{
+        margin-bottom: 10vh;
+        margin-left: 30vw;
+       
+    }
+
+}
