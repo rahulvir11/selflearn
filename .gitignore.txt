@@ -1,1 +1,1 @@
-/node_modules
+protfolio/node_modules
