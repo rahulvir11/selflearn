@@ -1,0 +1,453 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+}
+
+#nav {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
+    border-bottom: 1px solid #dadadada;
+    z-index: 2;
+    background-color: #fff;
+}
+
+#nav h1 span {
+    color: springgreen;
+}
+
+#nav h1 {
+    font-size: 3.5vw;
+    font-weight: 300;
+    letter-spacing: -1px;
+    word-spacing: -3px;
+}
+
+#nav #part2 {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#nav #part2 a:hover {
+    border-bottom: 2px solid greenyellow;
+}
+
+#nav #part2 a {
+    color: black;
+    text-decoration: none;
+}
+
+.hoverefft {
+    border: 1px solid #dadadada;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hoverefft_child {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    background-color: springgreen;
+    z-index: -1;
+    transition: left .5s ease;
+}
+
+.hoverefft:hover .hoverefft_child {
+    left: 0%;
+}
+
+#page1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#page1>h1 {
+    font-size: 5.2vw;
+    width: 60%;
+    font-weight: 100;
+    letter-spacing: -1px;
+    position: relative;
+    text-transform: capitalize;
+    text-align: center;
+    z-index: 2;
+}
+
+#page1>h1::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 16px;
+    /* background-color: red; */
+    background-image: url("https://thisisdigital.co.uk/dist/images/underline-green.svg");
+    bottom: -2%;
+    left: 50%;
+    background-size: cover;
+    transform: translate(-50%, 0);
+}
+
+#page1 img {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    transition: margin .5s ease;
+}
+#page1 img:hover {
+   margin-bottom: 10px;
+}
+
+#page1 #img1 {
+    width: 250px;
+    height: 390px;
+    left: 5%;
+    bottom: 10%;
+}
+
+#page1 #img2 {
+    width: 230px;
+    height: 220px;
+    left: 55%;
+    bottom: 42%;
+}
+
+#page1 #img3 {
+    width: 220px;
+    height: 220px;
+    right: 9%;
+    bottom: 10%;
+}
+
+#page1>h3 {
+    position: absolute;
+    left: 40%;
+    bottom: 15%;
+    display: flex;
+    font-size: 2vw;
+}
+
+#page1>h3 p {
+    padding: 4px 20px;
+    margin-left: 10px;
+    border-radius: 15px;
+    font-weight: 400;
+}
+
+#page2 {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    background-color: black;
+    flex-flow: column;
+}
+
+#page2 .text {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    color: #fff;
+
+}
+
+#page2 .text>h1 {
+    font-size: 4vw;
+    font-weight: 300;
+    margin-top: 30px;
+    position: relative;
+}
+
+#page2 .text>h1::after {
+    content: "";
+    position: absolute;
+    width: 24%;
+    height: 40%;
+    /* background-color: red; */
+    background-image: url("https://thisisdigital.co.uk/dist/images/circle-green.svg");
+    bottom: -3%;
+    left: 47.5%;
+    background-size: cover;
+    transform: translate(-50%, 0%);
+
+}
+
+#page2 .text h2 {
+    font-size: 1.5vw;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: -.5px;
+    text-align: center;
+}
+
+#page2 .text h2::before {
+    content: "";
+    width: 1.3%;
+    height: 45%;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: springgreen;
+    border: 2px solid springgreen;
+    text-align: center;
+    margin-right: 10px;
+    z-index: -4;
+
+}
+
+.text>h3 {
+    width: 50%;
+    height: 13%;
+    margin-top: 40px;
+    display: flex;
+    font-size: 2vw;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.text .hoverefft {
+    z-index: 1;
+    width: 15%;
+    height: 90%;
+    margin-left: 20px;
+
+}
+
+.text .hoverefft .hoverefft_child {
+    z-index: -1;
+}
+
+#page3 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page3 #left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+#left #img5{
+    position: absolute;
+    width: 25%;
+    height: 65%;
+    top: 0;
+    left: 0;
+    transition: margin .4s ease-in;
+}
+#left #img5:hover{
+   margin-top: 5%;
+}
+#left #img6{
+    position: absolute;
+    width: 25%;
+    height:  30%;
+    bottom: -10%;
+    left: 0;
+    transition: margin .4s ease-in;
+
+}
+#left #img6:hover{
+    margin-bottom: 5%;
+ }
+#left #img7{
+    position: absolute;
+    width: 47%;
+    height: 42%;
+    top: 0;
+    left: 30%;
+    transition: margin .4s ease-in;
+
+}
+#left #img7:hover{
+    margin-left: 5%;
+ }
+#left #img8{
+    position: absolute;
+    width: 65%;
+    height: 444px;
+    top: 48%;
+    left: 30%;
+    transition: margin .4s ease-in;
+
+}
+#left #img8:hover{
+    margin-left: 5%;
+ }
+#page3 #right {
+    width: 50%;
+    height: 100%;
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0% 3%;
+    flex-flow: column;
+    flex-wrap: wrap;
+    
+
+}
+#right h1{
+    font-size: 5vw;
+    font-weight: 100;
+    position: relative;
+}
+#right h1::after{
+    content: "";
+    position: absolute;
+    width: 36%;
+    height: 16px;
+    /* background-color: red; */
+    background-image: url("https://thisisdigital.co.uk/dist/images/underline-green.svg");
+    top:39%;
+    left: 44%;
+    background-size: cover;
+    z-index: -1;
+    transform: translate(-50%, 0);
+}
+#right img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(148, 175, 224);
+    margin-right: 5px;
+}
+#right h3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2vw;
+}
+#right h3 .hoverefft{
+    height: 35px;
+    margin-left: 18px;
+}
+#right p{
+    font-size: 2vw;
+    font-weight: 200;
+    line-height:6vh;
+}
+#page4{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    padding: 0vh 10vw;
+    padding-top: 20vh;
+    justify-content: space-between;
+}
+
+#page4 #leftside{
+    width: 40%;
+    height: 80%;
+    background-color: red;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    padding: 0,10%;
+
+}
+#page4 #rightside{
+    width: 40%;
+    height: 80%;
+    background-color: blue;
+    cursor: pointer;
+    padding: 0,10%;
+    overflow: hidden;
+    position: relative;
+ 
+}
+#page4 #rightside img{
+  width: 100%;
+  height: 100%;
+  transition: scale 1s ease;
+  position: absolute;
+  z-index: 1;
+}
+#page4 #rightside img:hover{
+  scale: 1.1;
+}
+#page4 #leftside img {
+    width: 100%;
+    height: 100%;
+    transition: scale 1s ease;
+    position: absolute;
+    z-index: 1;
+}
+#page4 #leftside img:hover {
+    scale: 1.1;
+}
+.txt{
+    width: 85%;
+    height: 40%;
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-flow: column;
+    z-index: 1;
+    color: #fff;
+}
+.txt h3{
+    width: 80%;
+    height: 18%;
+    margin-top: 10px;
+    display: flex;
+    font-size: 2vw;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.txt h3 p{
+    height: 70%;
+}
+.txt h1{
+    font-size: 300;
+    line-height: -4px;
+}
