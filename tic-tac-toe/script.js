@@ -1,4 +1,3 @@
-
 console.log("welcome to Tic Tac Toe");
 let music = new Audio("music.mp3");
 let audioTurn = new Audio("ting.mp3");
@@ -31,6 +30,7 @@ const checkwin = () => {
             document.querySelector('.imgbox').classList.add("imgbox1");
             document.querySelector("#line").style.transform = `translate(${e[3]}vw, ${e[4]}vw) rotate(${e[5]}deg)`
             document.querySelector("#line").style.width = `${e[6]}vw`;
+            gameover.play()
         }
     })
 }
@@ -45,6 +45,7 @@ boxes.forEach((e) => {
             turn = changeTurn();
             checkwin();
             if (!isgameover) {
+                
                 document.querySelector('.info').innerText = "terun for " + turn;
             }
         }
